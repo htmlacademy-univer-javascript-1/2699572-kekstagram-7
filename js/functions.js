@@ -34,3 +34,22 @@ function extractDigits(value) {
 
   return parseInt(digits, 10);
 }
+
+
+checkLength('проверяемая строка', 20); // true
+checkLength('проверяемая строка', 18); // true
+checkLength('проверяемая строка', 10); // false
+
+isPalindrome('топот');                    // true
+isPalindrome('ДовОд');                    // true
+isPalindrome('Кекс');                     // false
+isPalindrome('Лёша на полке клопа нашёл '); // true
+
+extractDigits('2023 год');            // 2023
+extractDigits('ECMAScript 2022');     // 2022
+extractDigits('1 кефир, 0.5 батона'); // 105
+extractDigits('агент 007');           // 7
+extractDigits('а я томат');           // NaN
+extractDigits(2023);                  // 2023
+extractDigits(-1);                    // 1
+extractDigits(1.5);                   // 15
